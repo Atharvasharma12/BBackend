@@ -45,4 +45,6 @@ const rouDeleteProduct = require('./Routes/rouDeleteProduct')
 app.use('/deleteProduct', rouDeleteProduct)
 
 
-app.listen(9000, console.log("Server has started on 9000"));
+app.listen(9000, () => {
+  console.log("Server has started", process.env.PORT);
+});

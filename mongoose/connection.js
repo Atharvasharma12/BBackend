@@ -4,7 +4,7 @@ const cors = require('cors')
 
 
 mongoose
-  .connect("mongodb://localhost:27017/Boekenza3DB", {
+  .connect(process.env.MONGO_CONNECT, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
