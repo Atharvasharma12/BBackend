@@ -33,7 +33,7 @@ const rouAccount = require("./Routes/rouAccountPage");
 app.use("/account", auth, rouAccount);
 
 const rouLogout = require("./Routes/rouLogout");
-app.use("/logout", auth, rouLogout);
+app.use("/logout", rouLogout);
 
 const rouUploadProduct = require("./Routes/rouUpladProduct");
 app.use("/uploadProduct", auth, rouUploadProduct);

@@ -4,6 +4,7 @@ const newUserModel = require('../mongoose/userModel')
 const userAccount = async(req , res) =>{
 
     const {userId} = req.body;
+    console.log("userId");
 
     if(userId){
         const usersProducts = await newUserModel.findOne({_id : userId}).populate("products")

@@ -4,6 +4,7 @@ const newUserModel = require("../mongoose/userModel");
 const userLoginFunc = async (req, res) => {
   try {
     const { userMail, userPasswrod } = req.body;
+    console.log("landed");
 
     const isUserPresent = await newUserModel.findOne({ email: userMail });
     if (isUserPresent) {
