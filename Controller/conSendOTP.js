@@ -20,7 +20,7 @@ const SendOTP = async (req, res) => {
       ("use strict");
 
       const transporter = nodemailer.createTransport({
-        // service: "Gmail",
+        service: "Gmail",
         // host: "smtp.ethereal.email",
 
         port: 587,
@@ -50,6 +50,7 @@ const SendOTP = async (req, res) => {
       res.send("user already present");
     }
   } catch (error) {
+    res.send("Mail not sent");
     console.log(error);
   }
 };
