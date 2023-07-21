@@ -40,7 +40,7 @@ const SendMailToSeller = async (req, res) => {
 
         Buyer's Information - 
         Name : ${name}
-        Email : ${emailId}`, // plain text body        html: `<b></b>`, // html body
+        Email : ${emailId}`, // plain text body
       });
 
       res.send("Mail sent to buyer");
