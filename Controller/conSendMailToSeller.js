@@ -15,8 +15,6 @@ const SendMailToSeller = async (req, res) => {
   try {
     const userDetail = await userModel.findOne({ _id: sellerId });
 
-    ("use strict");
-
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       port: 587,

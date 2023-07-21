@@ -48,7 +48,7 @@ const rouSendOTP = require("./Routes/rouSendOTP");
 app.use("/sendOTP", rouSendOTP);
 
 const rouSendMailToSeller = require("./Routes/rouSendMailToSeller");
-app.use("/sendMailerToSeller", rouSendMailToSeller);
+app.use("/sendMailerToSeller", auth, rouSendMailToSeller);
 
 app.listen(9000, () => {
   console.log("Server has started", process.env.PORT);
