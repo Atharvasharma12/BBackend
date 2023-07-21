@@ -19,9 +19,12 @@ const addNewUser = async (userData) => {
     });
 
     if (!isUserPresent) {
-      console.log(userData);
-      let checkOTP = await OTPModel.findOne({ mail: userData.userMail });
-      console.log(checkOTP);
+      // console.log(userData);
+      let checkOTP = await OTPModel.findOne({
+        mail: userData.userMail,
+        otp: userData.otp,
+      });
+      // console.log(checkOTP);
       if (userData.otp == checkOTP.otp) {
         console.log("otp verified");
         await newUser.save();
